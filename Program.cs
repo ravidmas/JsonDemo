@@ -72,7 +72,6 @@ app.MapGet("/getChords", (string? difficulty, int? count) =>
 {
     if (difficulty == "all") return Results.Ok(chords);
     List<Chord> chordList = new List<Chord>();
-
     if (difficulty == "easy")
     {
         for (int i = 0; i < chords.Count; i++)
