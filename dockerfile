@@ -17,11 +17,11 @@ WORKDIR /app
 # Copy published output from build stage
 COPY --from=build /app/output ./
 
-# Expose port 5174
-EXPOSE 5174
+# Expose port 8080
+EXPOSE 8080
 
 # Set environment to Production
 ENV ASPNETCORE_ENVIRONMENT=Production
-ENV ASPNETCORE_URLS=http://+:5174
+ENV ASPNETCORE_URLS=http://+:8080
 
 ENTRYPOINT ["dotnet", "JsonDemo.dll"]
