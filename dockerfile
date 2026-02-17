@@ -20,8 +20,6 @@ COPY --from=build /app/output ./
 # Expose port 8080
 EXPOSE 8080
 
-# Set environment to Production
 ENV ASPNETCORE_ENVIRONMENT=Production
-ENV ASPNETCORE_URLS=http://+:8080
 
 ENTRYPOINT ["dotnet", "JsonDemo.dll"]
